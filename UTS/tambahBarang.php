@@ -20,3 +20,30 @@
 				<button name="submit" >Masukkan</button>
 			</div>
 		</form>
+
+<?php
+session_start();
+
+include "conn.php";
+include "conf.php";
+ 
+$kodeBarang=$_POST['kode_barang'];
+$nama=$_POST['nama'];
+$harga=$_POST['harga'];
+$gambar = $_POST['gambar'];
+$jml=$_POST['jml_stok'];
+
+if (isset($_POST["foto"])){
+	$sql = "insert into barang (kode_barang,nama,harga,gambar,jml_stok) values ('$kode_barang',$nama,$harga,'$gambar','$jml_stok')";	  
+
+  if ($conn->query($sql) === TRUE) {
+		$conn->close();  
+		echo "berhasil tambah";  
+	}else{
+		$conn->close();  
+		echo "gagal tambah";			
+	}		
+}else{
+	echo "Sorry, there was an error uploading your file."; 
+}
+?>

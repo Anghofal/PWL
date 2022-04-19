@@ -20,3 +20,22 @@
 				<button name="submit" >Masukkan</button>
 			</div>
 		</form>
+
+		<?php
+session_start();
+
+include "conn.php";
+include "conf.php";
+  
+$kodeBarang=$_POST['kode_barang'];
+$nama=$_POST['nama'];
+$harga=$_POST['harga'];
+$gambar = $_POST['gambar'];
+$jml=$_POST['jml_stok'];
+
+if(isset($_POST['submit'])){ 	
+		$sql = "update barang set nama='$nama',harga='$harga',jumlah='$jumlah',gambar='$gambar',jml_stok='$jml' where kode_barang='$kode_barang'";
+	}else{
+		echo "gagal update";
+	} 
+?>  
