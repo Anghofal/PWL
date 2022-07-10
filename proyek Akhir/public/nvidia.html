@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Shop</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<div style="float: left"><img class="navimg" src="img/nav.png" alt="nav"></div>
+		<div align="center"><img class="navimg1" style="width: 100px;height: 50px" src="img/logonvidia.png"></div>
+		<div class="navbarContent">
+		<a href="index.html">Home</a>
+		<a href="#" class="navbarProduk">Produk</a>
+		<div class="produkContent" style="display: none;margin-left: 5%">
+			<a href="amd.html" >AMD</a>
+			<a href="nvidia.html" >NVIDIA</a>
+		</div>
+		<a href="CP.html">Kontak Kami</a>
+		<a href="tamu.html">Buku Tamu</a>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="width-1" ><a href="amd.html">
+			<button>VGA AMD</button>
+			<img style="height: 100px" src="img/logoamd.png">
+			</a>
+		</div>
+		
+		
+		<div class="width-1" ><a href="nvidia.html">
+			<button>VGA NVIDIA</button>
+			<img style="height: 100px" src="img/logonvidia.png"></a>
+		</div>
+	</div>
+<div id="nvidia" class="container">
+	<script>
+		$(document).ready(function(){
+			$.getJSON("nvidia.json",function(data){
+			for(var i=0;i<data.length;i++){
+				$("#nvidia").append(
+					'<div class="width-1">'+
+					'<div>'+data[i].nama+'</div>'+
+					'<div><img src="'+data[i].img+'"></div>'+
+					'<div>'+data[i].price+'</div>'+
+					'<div><a href="Cart.html?nama='+data[i].nama+'&gambar='+data[i].img+'"><button>Beli</button></a></div>'+
+					'</div>'
+				);
+			}
+			})
+		})
+	</script>
+</div>
+
+</body>
+</html>
+<!--
+<?php
+   $dbhost = 'localhost';
+   $dbuser = 'root';
+   $dbpass = '';
+   
+   $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+   
+   if(! $conn ) {
+      die('Could not connect: ' . mysqli_error());
+   }
+   
+   $sql = 'SELECT id, nama_produk, harga, img FROM tabel_nvidia';
+   mysqli_select_db($conn,'proyek_akhir');
+   $retval = mysqli_query($conn,$sql);
+   
+   if(! $retval ) {
+      die('Could not get data: ' . mysqli_error());
+   }
+   
+   while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)) {
+      echo '<div class="width-1">'.
+			'<div>'.($row["nama_produk"]).'</div>'.
+			'<div><img src="'.($row["img"]).'"></div>'.
+			'<div>'.($row["harga"]).'</div>'.
+			'<div><a href="Cart.php?nama_produk='.($row["nama_produk"]).'&gambar='.($row["img"]).'"><button>Beli</button></a></div>'.
+			'</div>';
+   }
+   
+   mysqli_close($conn);
+?>
+-->

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Shop</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<img class="navimg" src="img/nav.png" alt="nav">
+		<div class="navbarContent">
+		<a href="index.html">Home</a>
+		<a href="#" class="navbarProduk">Produk</a>
+		<div class="produkContent" style="display: none;margin-left: 5%">
+			<a href="amd.html" >AMD</a>
+			<a href="nvidia.html" >NVIDIA</a>
+		</div>
+		<a href="CP.html">Kontak Kami</a>
+		<a href="tamu.html">Buku Tamu</a>
+		</div>
+	</div>
+
+	<div class="container">
+	<div class="width-3" style="font-size: 40px">Buku Tamu</div>
+	</div>
+	
+	<div style="justify-content: center" class="container">
+		<div style="margin-bottom: 0px" class="width-1">Nama</div><div style="margin-bottom: 0px" class="width-2">Pesan</div>
+	</div>
+	
+</body>
+</html>
+
+<!--
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "proyek_akhir";
+	if (isset($_GET['submit2'])){
+		
+		$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($conn->connect_error) {
+  		die("Connection failed: " . $conn->connect_error);
+	}
+
+	  $sql = "INSERT INTO tamu (nama, pesan)
+	  VALUES ('".$_GET['nama']."' ,'".$_GET['pesan']."')";
+	  mysqli_query($conn,$sql);
+
+	$conn->close();
+	}
+	$conn = mysqli_connect($servername, $username, $password);
+   
+   if(! $conn ) {
+      die('Could not connect: ' . mysqli_error());
+   }
+   
+   $sql = 'SELECT * FROM tamu';
+   mysqli_select_db($conn,'proyek_akhir');
+   $retval = mysqli_query($conn,$sql);
+   
+   if(! $retval ) {
+      die('Could not get data: ' . mysqli_error());
+   }
+   
+   while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)) {
+	   echo '<div style="justify-content: center" class="container">
+		<div class="width-1" style="margin: 0px">'.($row["nama"]).'</div>
+		<div style="margin: 0px" class="width-2">'.($row["pesan"]).'</div>
+	</div>';
+   }
+   
+   mysqli_close($conn);
+	?>
+-->

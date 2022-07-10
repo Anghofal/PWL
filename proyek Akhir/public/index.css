@@ -1,0 +1,70 @@
+.navbar{
+	background-color: firebrick;
+	padding: 10px;
+}
+.navimg{
+	width: 40px;
+	height: 40px;
+}
+.navimg1{
+	width: 40px;
+	height: 40px;
+}
+.navbarContent{
+	background-color: green;
+	min-width: 160px;
+	display: none;
+}
+.navbarContent a{
+	color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.navbarContent a:hover{
+	background-color: darkgrey;
+}
+
+.width-1{width: 30%;
+margin: 20px 0px}
+.width-2{width: 60%;
+margin: 20px 0px}
+.width-3{width: 90%;
+margin: 20px 0px}
+
+.container{
+	display: flex;
+	text-align: center;
+	flex-wrap: wrap;
+	justify-content:space-around;
+	
+}
+
+.container div{
+	font-size: 20px;
+	padding: 5px;
+	background-color: lightgoldenrodyellow;
+	border: 1px outset black;
+}
+.container div img{
+	max-width: 100%;
+	min-height: 40px;
+	max-height: 200px;
+}
+
+.container div a button{
+	background-color:#B9B914;
+	color: white;
+	border-color: #B9B914;
+	font-size: 30px;
+	width: 100%;
+	
+}
+.container div a{
+	text-decoration: none
+}
+.container div a:visited{
+	color: black
+}
+
+

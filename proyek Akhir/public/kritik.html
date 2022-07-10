@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Shop</title>
+	<link rel="stylesheet" href="cart.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<img class="navimg" src="img/nav.png" alt="nav">
+		<div class="navbarContent">
+		<a href="index.html">Home</a>
+		<a href="#" class="navbarProduk">Produk</a>
+		<div class="produkContent" style="display: none;margin-left: 5%">
+			<a href="amd.php" >AMD</a>
+			<a href="nvidia.php" >NVIDIA</a>
+		</div>
+		<a href="CP.html">Kontak Kami</a>
+		<a href="tamu.html">Buku Tamu</a>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div style="font-size: 40px;text-align: center;font-weight: bold">Terima Kasih Telah membeli</div>
+		<div style="font-size: 40px;margin-bottom: 20px;text-align: center;font-weight: bold">Kami Mengapresiasi Segala Bentuk Kritik Maupun Saran</div>
+  <form action="tamu.html">
+	
+  <div class="row">
+    <div class="col-25">
+      <label>Nama Lengkap</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="nama" placeholder="Masukkan Nama Anda">
+    </div>
+  </div>
+	  
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Pesan</label>
+    </div>
+    <div class="col-75">
+		<textarea style="width: 100%;height: 200px;font-size: 16px" name="pesan" placeholder="Kritik atau Saran"></textarea>
+    </div>
+  </div>
+	
+  <div class="row">
+    <input type="submit" name="submit2" value="Masukkan">
+	</div>
+	</form>
+	  </div>
+	
+</body>
+</html>
